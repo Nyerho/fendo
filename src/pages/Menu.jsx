@@ -5,26 +5,26 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import { useCart } from '../context/CartContext';
 import { Plus } from 'lucide-react';
-import chickenShawarmaImg from '../../images/chickenshawarma.jpg';
-import grilledChickenImg from '../../images/grilledchicken.jpg';
-import grilledSausagesImg from '../../images/grilled sausages.jpg';
-import beefShawarmaImg from '../../images/PixVerse_Image_Effect_prompt_beef shawarma.jpg';
-import catfishImg from '../../images/PixVerse_Image_Effect_prompt_catfish_.jpg';
-import chickenWingsImg from '../../images/PixVerse_Image_Effect_prompt_chicken wings_.jpg';
-import gizzardSticksImg from '../../images/PixVerse_Image_Effect_prompt_gizzard sticks .jpg';
-import turkeyWingsImg from '../../images/PixVerse_Image_Effect_prompt_grillled turkey w.jpg';
+import imgW_181027 from '../../images/WhatsApp Image 2026-03-12 at 18.10.27.jpeg';
+import imgW_181123 from '../../images/WhatsApp Image 2026-03-12 at 18.11.23.jpeg';
+import imgW_181121 from '../../images/WhatsApp Image 2026-03-12 at 18.11.21.jpeg';
+import imgW_181120 from '../../images/WhatsApp Image 2026-03-12 at 18.11.20.jpeg';
+import imgW_181119 from '../../images/WhatsApp Image 2026-03-12 at 18.11.19.jpeg';
+import imgW_181048 from '../../images/WhatsApp Image 2026-03-12 at 18.10.48.jpeg';
+import imgW_181028 from '../../images/WhatsApp Image 2026-03-12 at 18.10.28.jpeg';
 
 const menuItems = [
-  { id: 1, name: 'Chicken Shawarma', price: 1500, category: 'Shawarma', image: chickenShawarmaImg },
-  { id: 2, name: 'Beef Shawarma', price: 1700, category: 'Shawarma', image: beefShawarmaImg },
-  { id: 3, name: 'Grilled Chicken', price: 3500, category: 'Grills', image: grilledChickenImg },
-  { id: 4, name: 'Grilled Sausage', price: 1000, category: 'Grills', image: grilledSausagesImg },
-  { id: 5, name: 'Gizzard Sticks', price: 1200, category: 'Grills', image: gizzardSticksImg },
-  { id: 6, name: 'Catfish', price: 4000, category: 'Grills', image: catfishImg },
-  { id: 7, name: 'Turkey Wings', price: 2500, category: 'Grills', image: turkeyWingsImg },
-  { id: 8, name: 'Chicken Wings', price: 2000, category: 'Grills', image: chickenWingsImg },
-  { id: 9, name: 'Full Turkey', price: 25000, category: 'Grills', image: 'https://placehold.co/600x400/D32F2F/FFD700?text=Full+Turkey' },
-  { id: 10, name: 'Full Chicken', price: 8000, category: 'Grills', image: 'https://placehold.co/600x400/D32F2F/FFD700?text=Full+Chicken' },
+  // Mapping WhatsApp images to closest menu items (assumption noted)
+  { id: 1, name: 'Chicken Shawarma', price: 1500, category: 'Shawarma', image: imgW_181027 },
+  { id: 2, name: 'Beef Shawarma', price: 1700, category: 'Shawarma', image: imgW_181123 },
+  { id: 3, name: 'Grilled Chicken', price: 3500, category: 'Grills', image: imgW_181121 },
+  { id: 4, name: 'Grilled Sausage', price: 1000, category: 'Grills', image: imgW_181028 },
+  { id: 5, name: 'Gizzard Sticks', price: 1200, category: 'Grills', image: imgW_181119 },
+  { id: 6, name: 'Catfish', price: 4000, category: 'Grills', image: imgW_181048 },
+  { id: 7, name: 'Turkey Wings', price: 2500, category: 'Grills', image: imgW_181120 },
+  { id: 8, name: 'Chicken Wings', price: 2000, category: 'Grills', image: imgW_181120 },
+  { id: 9, name: 'Full Turkey', price: 25000, category: 'Grills', image: imgW_181048 },
+  { id: 10, name: 'Full Chicken', price: 8000, category: 'Grills', image: imgW_181121 },
 ];
 
 function Menu() {
