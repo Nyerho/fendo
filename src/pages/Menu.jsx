@@ -16,16 +16,16 @@ import chickenShawarmaImg from '../../images/chickenshawarma.jpg';
 import beefShawarmaImg from '../../images/PixVerse_Image_Effect_prompt_beef shawarma.jpg';
 
 const menuItems = [
+  { id: 8, name: 'Chicken Shawarma', price: 1500, category: 'Shawarma', image: chickenShawarmaImg },
+  { id: 9, name: 'Beef Shawarma', price: 1700, category: 'Shawarma', image: beefShawarmaImg },
   // Ordered mapping from the first image to the last, with correct names
   { id: 1, name: 'Grilled Turkey', price: 2500, category: 'Grills', image: imgW_181027 },
   { id: 2, name: 'CatFish Peppersoup', price: 4000, category: 'Soups', image: imgW_181123 },
   { id: 3, name: 'Peppered Sauce with Kpomo, Goatmeat, etc', price: 1500, category: 'Sauce', image: imgW_181121 },
-  { id: 4, name: 'Cowleg/Goatmeat Peppersoup', price: 3500, category: 'Soups', image: imgW_181028 },
+  { id: 4, name: 'Grilled Chicken', price: 3500, category: 'Grills', image: imgW_181028 },
   { id: 5, name: 'Chicken and Chips', price: 3000, category: 'Combos', image: imgW_181119 },
   { id: 6, name: 'Zobo', price: 500, category: 'Drinks', image: imgW_181048 },
-  { id: 7, name: 'Grilled Chicken', price: 3500, category: 'Grills', image: imgW_181120 },
-  { id: 8, name: 'Chicken Shawarma', price: 1500, category: 'Shawarma', image: chickenShawarmaImg },
-  { id: 9, name: 'Beef Shawarma', price: 1700, category: 'Shawarma', image: beefShawarmaImg },
+  { id: 7, name: 'Cowleg/Goatmeat Peppersoup', price: 3500, category: 'Soups', image: imgW_181120 },
 ];
 
 function Menu() {
