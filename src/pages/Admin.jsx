@@ -118,6 +118,7 @@ function Admin() {
                   <td>
                     <div>{order.customerDetails.name}</div>
                     <small className="text-muted">{order.customerDetails.phone}</small>
+                    {order.customerDetails.email && <div className="text-muted small">{order.customerDetails.email}</div>}
                   </td>
                   <td>
                     <ul className="list-unstyled mb-0 small">

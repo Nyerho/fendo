@@ -15,7 +15,7 @@ function Cart() {
   const navigate = useNavigate();
   
   const [showCheckout, setShowCheckout] = useState(false);
-  const [customerDetails, setCustomerDetails] = useState({ name: '', phone: '', address: '' });
+  const [customerDetails, setCustomerDetails] = useState({ name: '', phone: '', email: '', address: '' });
   const [paymentStep, setPaymentStep] = useState(false);
   const [orderComplete, setOrderComplete] = useState(false);
   const [currentOrderId, setCurrentOrderId] = useState(null);
@@ -192,6 +192,15 @@ function Cart() {
                   required 
                   value={customerDetails.phone}
                   onChange={(e) => setCustomerDetails({...customerDetails, phone: e.target.value})}
+                />
+              </Form.Group>
+              <Form.Group className="mb-3">
+                <Form.Label>Email Address</Form.Label>
+                <Form.Control 
+                  type="email" 
+                  required 
+                  value={customerDetails.email}
+                  onChange={(e) => setCustomerDetails({...customerDetails, email: e.target.value})}
                 />
               </Form.Group>
               <Form.Group className="mb-3">
