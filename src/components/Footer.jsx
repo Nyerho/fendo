@@ -1,6 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
-import { UtensilsCrossed } from 'lucide-react';
+import fendoMainLogo from '../../images/fendo mainlogo.jpeg';
 
 function Footer() {
   return (
@@ -9,7 +9,7 @@ function Footer() {
         <div className="row g-4">
           <div className="col-md-6 text-center text-md-start">
             <h4 className="d-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3 text-fendo-yellow">
-              <UtensilsCrossed size={24} /> Fendo Shawarma
+              <img src={fendoMainLogo} alt="Fendo" className="footer-logo" /> Fendo Shawarma
             </h4>
             <p className="text-muted small mb-0">
               The best shawarma and grilled delicacies in town. Delivered fast and fresh to your doorstep.

@@ -4,8 +4,9 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import Badge from 'react-bootstrap/Badge';
 import { useCart } from '../context/CartContext';
-import { ShoppingCart, Menu, Truck, Home, UtensilsCrossed } from 'lucide-react';
+import { ShoppingCart, Menu, Truck, Home } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import fendoLogo from '../../images/fendo logo.jpeg';
 
 function Navigation() {
   const { cartItems } = useCart();
@@ -34,7 +35,7 @@ function Navigation() {
     <Navbar expand="lg" className="bg-fendo-red" sticky="top" expanded={expanded} onToggle={setExpanded}>
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex align-items-center gap-2">
-          <UtensilsCrossed size={32} />
+          <img src={fendoLogo} alt="Fendo" className="brand-logo" />
           Fendo Shawarma
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

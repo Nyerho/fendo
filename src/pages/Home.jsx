@@ -3,6 +3,8 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import { Utensils, Flame, Truck, ArrowRight, Star, Timer, MapPin } from 'lucide-react';
 import heroVideo from '../../images/fendo.mp4';
+import frontStoreImg from '../../images/fendo frontstore.jpeg';
+import fendoMainLogo from '../../images/fendo mainlogo.jpeg';
 import chickenShawarmaImg from '../../images/chickenshawarma.jpg';
 import beefShawarmaImg from '../../images/PixVerse_Image_Effect_prompt_beef shawarma.jpg';
 import catfishImg from '../../images/PixVerse_Image_Effect_prompt_catfish_.jpg';
@@ -21,7 +23,7 @@ function Home() {
           <div className="row align-items-center g-5">
             <div className="col-lg-6">
               <div className="hero-pill mb-3">
-                <span className="hero-pill-dot" />
+                <img src={fendoMainLogo} alt="Fendo" className="hero-brand-logo" />
                 Freshly grilled. Fast delivery. Every day.
               </div>
               <h1 className="display-4 fw-bold text-white mb-3">
@@ -58,8 +60,8 @@ function Home() {
             <div className="col-lg-6">
               <div className="hero-media shadow-lg">
                 <img
-                  src={beefShawarmaImg}
-                  alt="Fendo Shawarma and Grills"
+                  src={frontStoreImg}
+                  alt="Fendo Front Store"
                   className="hero-image"
                 />
                 <div className="hero-media-overlay">
