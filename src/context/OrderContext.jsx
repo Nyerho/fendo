@@ -1,16 +1,24 @@
-import { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
 
 const OrderContext = createContext();
+
+const STORAGE_KEY = 'fendo_orders';
+const CHANNEL_NAME = 'fendo_orders_channel';
 
 export function useOrder() {
   return useContext(OrderContext);
 }
 
 export function OrderProvider({ children }) {
+  const channelRef = useRef(null);
+  const skipSyncRef = useRef(false);
+
+  const normalizeOrderId = (value) => String(value ?? '').trim().toUpperCase();
+
   // Initialize from localStorage if available
   const [orders, setOrders] = useState(() => {
     try {
-      const storedOrders = localStorage.getItem('fendo_orders');
+      const storedOrders = localStorage.getItem(STORAGE_KEY);
       return storedOrders ? JSON.parse(storedOrders) : [];
     } catch (error) {
       console.error('Failed to load orders from localStorage:', error);
@@ -18,10 +26,55 @@ export function OrderProvider({ children }) {
     }
   });
 
-  // Save to localStorage whenever orders change
   useEffect(() => {
+    if (typeof BroadcastChannel === 'undefined') return;
+    const channel = new BroadcastChannel(CHANNEL_NAME);
+    channelRef.current = channel;
+
+    const handleMessage = (event) => {
+      const message = event?.data;
+      if (!message || message.type !== 'orders_updated') return;
+
+      skipSyncRef.current = true;
+      setOrders(Array.isArray(message.orders) ? message.orders : []);
+    };
+
+    channel.addEventListener('message', handleMessage);
+    return () => {
+      channel.removeEventListener('message', handleMessage);
+      channel.close();
+      if (channelRef.current === channel) channelRef.current = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleStorage = (event) => {
+      if (event.key !== STORAGE_KEY) return;
+      if (event.newValue == null) return;
+
+      try {
+        const nextOrders = JSON.parse(event.newValue);
+        if (!Array.isArray(nextOrders)) return;
+        skipSyncRef.current = true;
+        setOrders(nextOrders);
+      } catch {
+        return;
+      }
+    };
+
+    window.addEventListener('storage', handleStorage);
+    return () => window.removeEventListener('storage', handleStorage);
+  }, []);
+
+  useEffect(() => {
+    if (skipSyncRef.current) {
+      skipSyncRef.current = false;
+      return;
+    }
+
     try {
-      localStorage.setItem('fendo_orders', JSON.stringify(orders));
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(orders));
+      channelRef.current?.postMessage({ type: 'orders_updated', orders });
     } catch (error) {
       console.error('Failed to save orders to localStorage:', error);
     }
@@ -44,9 +97,10 @@ export function OrderProvider({ children }) {
 
   // Update order status (Admin action)
   const updateOrderStatus = (orderId, newStatus) => {
+    const normalizedOrderId = normalizeOrderId(orderId);
     setOrders((prev) =>
       prev.map((order) =>
-        order.id === orderId
+        normalizeOrderId(order.id) === normalizedOrderId
           ? { ...order, status: newStatus, updatedAt: new Date().toISOString() }
           : order
       )
@@ -55,7 +109,8 @@ export function OrderProvider({ children }) {
 
   // Get order by ID
   const getOrder = (orderId) => {
-    return orders.find((order) => order.id === orderId);
+    const normalizedOrderId = normalizeOrderId(orderId);
+    return orders.find((order) => normalizeOrderId(order.id) === normalizedOrderId);
   };
 
   return (

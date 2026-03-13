@@ -7,18 +7,21 @@ import { useOrder } from '../context/OrderContext';
 
 function Tracking() {
   const [orderId, setOrderId] = useState('');
-  const [order, setOrder] = useState(null);
+  const [trackedOrderId, setTrackedOrderId] = useState('');
   const [error, setError] = useState('');
   const { getOrder } = useOrder();
 
+  const normalizedTrackedOrderId = trackedOrderId.trim();
+  const order = normalizedTrackedOrderId ? getOrder(normalizedTrackedOrderId) : null;
+
   const handleTrack = (e) => {
     e.preventDefault();
-    const foundOrder = getOrder(orderId.trim());
+    const normalizedInput = orderId.trim();
+    setTrackedOrderId(normalizedInput);
+    const foundOrder = getOrder(normalizedInput);
     if (foundOrder) {
-      setOrder(foundOrder);
       setError('');
     } else {
-      setOrder(null);
       setError('Order not found. Please check the ID and try again.');
     }
   };
