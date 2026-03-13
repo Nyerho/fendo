@@ -14,17 +14,14 @@ import imgW_181048 from '../../images/WhatsApp Image 2026-03-12 at 18.10.48.jpeg
 import imgW_181028 from '../../images/WhatsApp Image 2026-03-12 at 18.10.28.jpeg';
 
 const menuItems = [
-  // Mapping WhatsApp images to closest menu items (assumption noted)
-  { id: 1, name: 'Chicken Shawarma', price: 1500, category: 'Shawarma', image: imgW_181027 },
-  { id: 2, name: 'Beef Shawarma', price: 1700, category: 'Shawarma', image: imgW_181123 },
-  { id: 3, name: 'Grilled Chicken', price: 3500, category: 'Grills', image: imgW_181121 },
-  { id: 4, name: 'Grilled Sausage', price: 1000, category: 'Grills', image: imgW_181028 },
-  { id: 5, name: 'Gizzard Sticks', price: 1200, category: 'Grills', image: imgW_181119 },
-  { id: 6, name: 'Catfish', price: 4000, category: 'Grills', image: imgW_181048 },
-  { id: 7, name: 'Turkey Wings', price: 2500, category: 'Grills', image: imgW_181120 },
-  { id: 8, name: 'Chicken Wings', price: 2000, category: 'Grills', image: imgW_181120 },
-  { id: 9, name: 'Full Turkey', price: 25000, category: 'Grills', image: imgW_181048 },
-  { id: 10, name: 'Full Chicken', price: 8000, category: 'Grills', image: imgW_181121 },
+  // Ordered mapping from the first image to the last, with correct names
+  { id: 1, name: 'Grilled Turkey', price: 2500, category: 'Grills', image: imgW_181027 },
+  { id: 2, name: 'CatFish Peppersoup', price: 4000, category: 'Soups', image: imgW_181123 },
+  { id: 3, name: 'Spicy Kpomo', price: 1500, category: 'Soups', image: imgW_181121 },
+  { id: 4, name: 'Grilled Chicken', price: 3500, category: 'Grills', image: imgW_181120 },
+  { id: 5, name: 'Chicken and Chips', price: 3000, category: 'Combos', image: imgW_181119 },
+  { id: 6, name: 'Zobo', price: 500, category: 'Drinks', image: imgW_181048 },
+  { id: 7, name: 'Cowleg/Goatmeat Peppersoup', price: 3500, category: 'Soups', image: imgW_181028 },
 ];
 
 function Menu() {
