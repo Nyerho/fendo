@@ -14,18 +14,41 @@ import imgW_181048 from '../../images/WhatsApp Image 2026-03-12 at 18.10.48.jpeg
 import imgW_181028 from '../../images/WhatsApp Image 2026-03-12 at 18.10.28.jpeg';
 import chickenShawarmaImg from '../../images/chickenshawarma.jpg';
 import beefShawarmaImg from '../../images/PixVerse_Image_Effect_prompt_beef shawarma.jpg';
+import catfishImg from '../../images/PixVerse_Image_Effect_prompt_catfish_.jpg';
 
 const menuItems = [
-  { id: 8, name: 'Chicken Shawarma', price: 1500, category: 'Shawarma', image: chickenShawarmaImg },
-  { id: 9, name: 'Beef Shawarma', price: 1700, category: 'Shawarma', image: beefShawarmaImg },
-  // Ordered mapping from the first image to the last, with correct names
-  { id: 1, name: 'Grilled Turkey', price: 2500, category: 'Grills', image: imgW_181027 },
-  { id: 2, name: 'CatFish Peppersoup', price: 4000, category: 'Soups', image: imgW_181123 },
-  { id: 3, name: 'Peppered Sauce with Kpomo, Goatmeat, etc', price: 1500, category: 'Sauce', image: imgW_181121 },
-  { id: 4, name: 'Grilled Chicken', price: 3500, category: 'Grills', image: imgW_181028 },
-  { id: 5, name: 'Chicken and Chips', price: 3000, category: 'Combos', image: imgW_181119 },
-  { id: 6, name: 'Zobo', price: 500, category: 'Drinks', image: imgW_181048 },
-  { id: 7, name: 'Cowleg/Goatmeat Peppersoup', price: 3500, category: 'Soups', image: imgW_181120 },
+  { id: 1, name: 'Fendo Shawarma Main (Chicken, Beef & Mix)', price: 6000, category: 'Shawarma', image: beefShawarmaImg },
+  { id: 2, name: 'Regular Shawarma', price: 4000, category: 'Shawarma', image: chickenShawarmaImg },
+  { id: 3, name: 'Suya Shawarma', price: 4500, category: 'Shawarma', image: chickenShawarmaImg },
+  { id: 4, name: 'Suya Shawarma (Large)', price: 6500, category: 'Shawarma', image: beefShawarmaImg },
+
+  { id: 5, name: 'Barbecue Fish', price: 7000, priceText: '₦7,000–₦10,000', category: 'Grilled Specials', image: catfishImg },
+  { id: 6, name: 'Grill Plantain (Bole) with Fish', price: 8000, priceText: '₦8,000–₦10,000', category: 'Grilled Specials', image: catfishImg },
+  { id: 7, name: 'Barbecue Fish + Plantain Combo', price: 12000, priceText: '₦12,000+', category: 'Grilled Specials', image: catfishImg },
+
+  { id: 8, name: 'Goat Meat Pepper Soup', price: 5500, priceText: '₦5,500–₦7,000', category: 'Pepper Soup', image: imgW_181120 },
+  { id: 9, name: 'Pepper Soup', price: 6500, priceText: '₦6,500–₦8,000', category: 'Pepper Soup', image: imgW_181028 },
+  { id: 10, name: 'Catfish Pepper Soup', price: 6000, category: 'Pepper Soup', image: imgW_181123 },
+
+  {
+    id: 11,
+    name: 'Fendo Gril-tendo Special Combo (Barbecue Fish + Noodles + Hotdog)',
+    price: 9000,
+    priceText: '₦9,000–₦11,000',
+    category: 'Combos & Sides',
+    image: imgW_181027,
+  },
+  { id: 12, name: 'Chicken & Chips', price: 5500, category: 'Combos & Sides', image: imgW_181119 },
+  { id: 13, name: 'Turkey & Chips', price: 6000, category: 'Combos & Sides', image: imgW_181027 },
+  { id: 14, name: 'Small Chops (per pack)', price: 3000, category: 'Combos & Sides', image: imgW_181121 },
+  { id: 15, name: 'Veggie Noodles', price: 3000, category: 'Combos & Sides', image: imgW_181121 },
+  { id: 16, name: 'White Rice (Plain)', price: 2000, category: 'Combos & Sides', image: imgW_181119 },
+  { id: 17, name: 'White Rice (with sauce or soup)', price: 3500, category: 'Combos & Sides', image: imgW_181028 },
+
+  { id: 18, name: 'Fruity Zobo', price: 1000, category: 'Drinks', image: imgW_181048 },
+  { id: 19, name: 'Smoothies', price: 2500, category: 'Drinks', image: imgW_181048 },
+  { id: 20, name: 'Soft Drinks', price: 800, category: 'Drinks', image: imgW_181048 },
+  { id: 21, name: 'Alcohol (varies)', price: 0, priceText: 'Varies', category: 'Drinks', image: imgW_181048, canAdd: false },
 ];
 
 function Menu() {
@@ -48,8 +71,13 @@ function Menu() {
                   Delicious {item.name} prepared with fresh ingredients and our secret spices.
                 </Card.Text>
                 <div className="d-flex justify-content-between align-items-center mt-3 pt-3 border-top">
-                  <span className="h4 mb-0 fw-bold text-fendo-red">₦{item.price.toLocaleString()}</span>
-                  <Button variant="danger" onClick={() => addToCart(item)} className="d-flex align-items-center gap-2">
+                  <span className="h4 mb-0 fw-bold text-fendo-red">{item.priceText ?? `₦${item.price.toLocaleString()}`}</span>
+                  <Button
+                    variant="danger"
+                    onClick={() => addToCart(item)}
+                    className="d-flex align-items-center gap-2"
+                    disabled={item.canAdd === false}
+                  >
                     <Plus size={18} /> Add
                   </Button>
                 </div>
