@@ -15,6 +15,7 @@ import imgW_181028 from '../../images/WhatsApp Image 2026-03-12 at 18.10.28.jpeg
 import chickenShawarmaImg from '../../images/chickenshawarma.jpg';
 import beefShawarmaImg from '../../images/PixVerse_Image_Effect_prompt_beef shawarma.jpg';
 import catfishImg from '../../images/PixVerse_Image_Effect_prompt_catfish_.jpg';
+import fruityZoboImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.12.jpeg';
 
 const menuItems = [
   { id: 1, name: 'Fendo Shawarma Main (Chicken, Beef & Mix)', price: 6000, category: 'Shawarma', image: beefShawarmaImg },
@@ -45,7 +46,7 @@ const menuItems = [
   { id: 16, name: 'White Rice (Plain)', price: 2000, category: 'Combos & Sides', image: imgW_181119 },
   { id: 17, name: 'White Rice (with sauce or soup)', price: 3500, category: 'Combos & Sides', image: imgW_181028 },
 
-  { id: 18, name: 'Fruity Zobo', price: 1000, category: 'Drinks', image: imgW_181048 },
+  { id: 18, name: 'Fendo Fruity Zobo', price: 1000, category: 'Drinks', image: fruityZoboImg },
   { id: 19, name: 'Smoothies', price: 2500, category: 'Drinks', image: imgW_181048 },
   { id: 20, name: 'Soft Drinks', price: 800, category: 'Drinks', image: imgW_181048 },
   { id: 21, name: 'Alcohol (varies)', price: 0, priceText: 'Varies', category: 'Drinks', image: imgW_181048, canAdd: false },
