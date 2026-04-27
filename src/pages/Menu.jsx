@@ -6,9 +6,7 @@ import Button from 'react-bootstrap/Button';
 import { useCart } from '../context/CartContext';
 import { Plus } from 'lucide-react';
 import imgW_181027 from '../../images/WhatsApp Image 2026-03-12 at 18.10.27.jpeg';
-import imgW_181123 from '../../images/WhatsApp Image 2026-03-12 at 18.11.23.jpeg';
 import imgW_181121 from '../../images/WhatsApp Image 2026-03-12 at 18.11.21.jpeg';
-import imgW_181120 from '../../images/WhatsApp Image 2026-03-12 at 18.11.20.jpeg';
 import imgW_181119 from '../../images/WhatsApp Image 2026-03-12 at 18.11.19.jpeg';
 import imgW_181048 from '../../images/WhatsApp Image 2026-03-12 at 18.10.48.jpeg';
 import imgW_181028 from '../../images/WhatsApp Image 2026-03-12 at 18.10.28.jpeg';
@@ -16,6 +14,8 @@ import chickenShawarmaImg from '../../images/chickenshawarma.jpg';
 import beefShawarmaImg from '../../images/PixVerse_Image_Effect_prompt_beef shawarma.jpg';
 import catfishImg from '../../images/PixVerse_Image_Effect_prompt_catfish_.jpg';
 import fruityZoboImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.12.jpeg';
+import goatPepperSoupRiceImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.13.jpeg';
+import catfishPepperSoupHeadImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.32.jpeg';
 
 const menuItems = [
   { id: 1, name: 'Fendo Shawarma Main (Chicken, Beef & Mix)', price: 6000, category: 'Shawarma', image: beefShawarmaImg },
@@ -27,9 +27,9 @@ const menuItems = [
   { id: 6, name: 'Grill Plantain (Bole) with Fish', price: 8000, priceText: '₦8,000–₦10,000', category: 'Grilled Specials', image: catfishImg },
   { id: 7, name: 'Barbecue Fish + Plantain Combo', price: 12000, priceText: '₦12,000+', category: 'Grilled Specials', image: catfishImg },
 
-  { id: 8, name: 'Goat Meat Pepper Soup', price: 5500, priceText: '₦5,500–₦7,000', category: 'Pepper Soup', image: imgW_181120 },
+  { id: 8, name: 'Goat Meat Pepper Soup with White Rice', price: 5500, priceText: '₦5,500–₦7,000', category: 'Pepper Soup', image: goatPepperSoupRiceImg },
   { id: 9, name: 'Pepper Soup', price: 6500, priceText: '₦6,500–₦8,000', category: 'Pepper Soup', image: imgW_181028 },
-  { id: 10, name: 'Catfish Pepper Soup', price: 6000, category: 'Pepper Soup', image: imgW_181123 },
+  { id: 10, name: 'Catfish Pepper Soup (Head)', price: 4000, priceText: '₦4,000 (Head)', category: 'Pepper Soup', image: catfishPepperSoupHeadImg },
 
   {
     id: 11,
