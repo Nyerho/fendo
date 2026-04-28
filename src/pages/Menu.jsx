@@ -16,6 +16,8 @@ import catfishImg from '../../images/PixVerse_Image_Effect_prompt_catfish_.jpg';
 import fruityZoboImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.12.jpeg';
 import goatPepperSoupRiceImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.13.jpeg';
 import catfishPepperSoupHeadImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.32.jpeg';
+import catfishPepperSoupCenterTailImg from '../../images/WhatsApp Image 2026-04-23 at 15.06.57.jpeg';
+import goatMeatPepperSoupImg from '../../images/WhatsApp Image 2026-04-23 at 15.07.13.jpeg';
 
 const menuItems = [
   { id: 1, name: 'Fendo Shawarma Main (Chicken, Beef & Mix)', price: 6000, category: 'Shawarma', image: beefShawarmaImg },
@@ -28,28 +30,30 @@ const menuItems = [
   { id: 7, name: 'Barbecue Fish + Plantain Combo', price: 12000, priceText: '₦12,000+', category: 'Grilled Specials', image: catfishImg },
 
   { id: 8, name: 'Goat Meat Pepper Soup with White Rice', price: 5500, priceText: '₦5,500–₦7,000', category: 'Pepper Soup', image: goatPepperSoupRiceImg },
-  { id: 9, name: 'Pepper Soup', price: 6500, priceText: '₦6,500–₦8,000', category: 'Pepper Soup', image: imgW_181028 },
-  { id: 10, name: 'Catfish Pepper Soup (Head)', price: 4000, priceText: '₦4,000 (Head)', category: 'Pepper Soup', image: catfishPepperSoupHeadImg },
+  { id: 9, name: 'Goat Meat Pepper Soup', price: 5500, priceText: '₦5,500–₦7,000', category: 'Pepper Soup', image: goatMeatPepperSoupImg },
+  { id: 10, name: 'Pepper Soup', price: 6500, priceText: '₦6,500–₦8,000', category: 'Pepper Soup', image: imgW_181028 },
+  { id: 11, name: 'Catfish Pepper Soup (Head)', price: 4000, priceText: '₦4,000 (Head)', category: 'Pepper Soup', image: catfishPepperSoupHeadImg },
+  { id: 12, name: 'Catfish Pepper Soup (Center & Tail)', price: 3500, priceText: '₦3,500 (Center & Tail)', category: 'Pepper Soup', image: catfishPepperSoupCenterTailImg },
 
   {
-    id: 11,
+    id: 13,
     name: 'Fendo Gril-tendo Special Combo (Barbecue Fish + Noodles + Hotdog)',
     price: 9000,
     priceText: '₦9,000–₦11,000',
     category: 'Combos & Sides',
     image: imgW_181027,
   },
-  { id: 12, name: 'Chicken & Chips', price: 5500, category: 'Combos & Sides', image: imgW_181119 },
-  { id: 13, name: 'Turkey & Chips', price: 6000, category: 'Combos & Sides', image: imgW_181027 },
-  { id: 14, name: 'Small Chops (per pack)', price: 3000, category: 'Combos & Sides', image: imgW_181121 },
-  { id: 15, name: 'Veggie Noodles', price: 3000, category: 'Combos & Sides', image: imgW_181121 },
-  { id: 16, name: 'White Rice (Plain)', price: 2000, category: 'Combos & Sides', image: imgW_181119 },
-  { id: 17, name: 'White Rice (with sauce or soup)', price: 3500, category: 'Combos & Sides', image: imgW_181028 },
+  { id: 14, name: 'Chicken & Chips', price: 5500, category: 'Combos & Sides', image: imgW_181119 },
+  { id: 15, name: 'Turkey & Chips', price: 6000, category: 'Combos & Sides', image: imgW_181027 },
+  { id: 16, name: 'Small Chops (per pack)', price: 3000, category: 'Combos & Sides', image: imgW_181121 },
+  { id: 17, name: 'Veggie Noodles', price: 3000, category: 'Combos & Sides', image: imgW_181121 },
+  { id: 18, name: 'White Rice (Plain)', price: 2000, category: 'Combos & Sides', image: imgW_181119 },
+  { id: 19, name: 'White Rice (with sauce or soup)', price: 3500, category: 'Combos & Sides', image: imgW_181028 },
 
-  { id: 18, name: 'Fendo Fruity Zobo', price: 1000, category: 'Drinks', image: fruityZoboImg },
-  { id: 19, name: 'Smoothies', price: 2500, category: 'Drinks', image: imgW_181048 },
-  { id: 20, name: 'Soft Drinks', price: 800, category: 'Drinks', image: imgW_181048 },
-  { id: 21, name: 'Alcohol (varies)', price: 0, priceText: 'Varies', category: 'Drinks', image: imgW_181048, canAdd: false },
+  { id: 20, name: 'Fendo Fruity Zobo', price: 1000, category: 'Drinks', image: fruityZoboImg },
+  { id: 21, name: 'Smoothies', price: 2500, category: 'Drinks', image: imgW_181048 },
+  { id: 22, name: 'Soft Drinks', price: 800, category: 'Drinks', image: imgW_181048 },
+  { id: 23, name: 'Alcohol (varies)', price: 0, priceText: 'Varies', category: 'Drinks', image: imgW_181048, canAdd: false },
 ];
 
 function Menu() {
