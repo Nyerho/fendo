@@ -24,6 +24,7 @@ import grilledTurkeyWingsImg from '../../images/WhatsApp Image 2026-04-23 at 15.
 import friedTurkeyWingsImg from '../../images/WhatsApp Image 2026-04-23 at 15.12.31.jpeg';
 import dodoImg from '../../images/WhatsApp Image 2026-04-23 at 15.33.53.jpeg';
 import boleImg from '../../images/WhatsApp Image 2026-04-23 at 15.33.53 (1).jpeg';
+import boleFishImg from '../../images/WhatsApp Image 2026-04-23 at 15.33.54.jpeg';
 
 const menuItems = [
   { id: 1, name: 'Fendo Shawarma Main (Chicken, Beef & Mix)', price: 6000, category: 'Shawarma', image: beefShawarmaImg },
@@ -32,7 +33,7 @@ const menuItems = [
   { id: 4, name: 'Suya Shawarma (Large)', price: 6500, category: 'Shawarma', image: beefShawarmaImg },
 
   { id: 5, name: 'Barbecue Fish', price: 7000, priceText: '₦7,000–₦10,000', category: 'Grilled Specials', image: catfishImg },
-  { id: 6, name: 'Grill Plantain (Bole) with Fish', price: 8000, priceText: '₦8,000–₦10,000', category: 'Grilled Specials', image: catfishImg },
+  { id: 6, name: 'Fendo Bole-Fish (Barbecued Catfish and Bole)', price: 8000, priceText: '₦8,000–₦10,000', category: 'Grilled Specials', image: boleFishImg },
   { id: 7, name: 'Barbecue Fish + Plantain Combo', price: 12000, priceText: '₦12,000+', category: 'Grilled Specials', image: catfishImg },
   { id: 26, name: 'Grilled Turkey Wings', price: 6099, category: 'Grilled Specials', image: grilledTurkeyWingsImg },
   { id: 27, name: 'Fried Turkey Wings', price: 6099, category: 'Grilled Specials', image: friedTurkeyWingsImg },
