@@ -20,6 +20,10 @@ import catfishPepperSoupCenterTailImg from '../../images/WhatsApp Image 2026-04-
 import goatMeatPepperSoupImg from '../../images/WhatsApp Image 2026-04-23 at 15.07.13.jpeg';
 import veggieNoodlesTurkeyImg from '../../images/WhatsApp Image 2026-04-23 at 15.08.43.jpeg';
 import friedChickenWingsImg from '../../images/WhatsApp Image 2026-04-23 at 15.08.13.jpeg';
+import grilledTurkeyWingsImg from '../../images/WhatsApp Image 2026-04-23 at 15.09.33.jpeg';
+import friedTurkeyWingsImg from '../../images/WhatsApp Image 2026-04-23 at 15.12.31.jpeg';
+import dodoImg from '../../images/WhatsApp Image 2026-04-23 at 15.33.53.jpeg';
+import boleImg from '../../images/WhatsApp Image 2026-04-23 at 15.33.53 (1).jpeg';
 
 const menuItems = [
   { id: 1, name: 'Fendo Shawarma Main (Chicken, Beef & Mix)', price: 6000, category: 'Shawarma', image: beefShawarmaImg },
@@ -30,6 +34,8 @@ const menuItems = [
   { id: 5, name: 'Barbecue Fish', price: 7000, priceText: '₦7,000–₦10,000', category: 'Grilled Specials', image: catfishImg },
   { id: 6, name: 'Grill Plantain (Bole) with Fish', price: 8000, priceText: '₦8,000–₦10,000', category: 'Grilled Specials', image: catfishImg },
   { id: 7, name: 'Barbecue Fish + Plantain Combo', price: 12000, priceText: '₦12,000+', category: 'Grilled Specials', image: catfishImg },
+  { id: 26, name: 'Grilled Turkey Wings', price: 6099, category: 'Grilled Specials', image: grilledTurkeyWingsImg },
+  { id: 27, name: 'Fried Turkey Wings', price: 6099, category: 'Grilled Specials', image: friedTurkeyWingsImg },
 
   { id: 8, name: 'Goat Meat Pepper Soup with White Rice', price: 5500, priceText: '₦5,500–₦7,000', category: 'Pepper Soup', image: goatPepperSoupRiceImg },
   { id: 9, name: 'Goat Meat Pepper Soup', price: 4000, priceText: '₦4,000', category: 'Pepper Soup', image: goatMeatPepperSoupImg },
@@ -52,6 +58,8 @@ const menuItems = [
   { id: 24, name: 'Fendo Veggie Noodles with Turkey', price: 7500, category: 'Combos & Sides', image: veggieNoodlesTurkeyImg },
   { id: 18, name: 'White Rice (Plain)', price: 2000, category: 'Combos & Sides', image: imgW_181119 },
   { id: 19, name: 'White Rice (with sauce or soup)', price: 3500, category: 'Combos & Sides', image: imgW_181028 },
+  { id: 28, name: 'Dodo (Fried Plantain)', price: 1000, category: 'Combos & Sides', image: dodoImg },
+  { id: 29, name: 'Bole', price: 500, category: 'Combos & Sides', image: boleImg },
 
   { id: 20, name: 'Fendo Fruity Zobo', price: 1000, category: 'Drinks', image: fruityZoboImg },
   { id: 21, name: 'Smoothies', price: 2500, category: 'Drinks', image: imgW_181048 },
